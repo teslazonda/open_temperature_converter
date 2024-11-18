@@ -15,9 +15,16 @@ RSpec.describe 'Temperature API', type: :request do
         run_test!
       end
 
-      response '400', 'bad request' do
-        let(:value) { nil }
-        let(:scale) { nil }
+      response '400', 'invalid request - invalid scale' do
+        let(:value) { 100 }
+        let(:scale) { 'invalid' }
+
+        run_test!
+      end
+
+      response '422', 'temperature below absolute zero' do
+        let(:value) { -300 }
+        let(:scale) { 'C' }
 
         run_test!
       end

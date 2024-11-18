@@ -30,4 +30,6 @@ paths:
         '200':
           description: temperature converted successfully
         '400':
-          description: bad request
+          description: invalid request - invalid scale
+        '422':
+          description: temperature below absolute zero
