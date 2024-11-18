@@ -1,0 +1,33 @@
+---
+openapi: 3.0.1
+info:
+  title: Temperature Converter API
+  version: v1
+paths:
+  "/convert":
+    get:
+      summary: Converts temperature between Celsius and Fahrenheit
+      tags:
+      - Temperature
+      parameters:
+      - name: value
+        in: query
+        schema:
+          type: number
+        required: true
+        description: Temperature value to convert
+      - name: scale
+        in: query
+        schema:
+          type: string
+          enum:
+          - C
+          - F
+        required: true
+        description: The current scale of the temperature ("C" for Celsius, "F" for
+          Fahrenheit)
+      responses:
+        '200':
+          description: temperature converted successfully
+        '400':
+          description: bad request
