@@ -1,4 +1,4 @@
-# Open API Temperature Converter
+# OpenAPI Temperature Converter
 
 A simple API for converting temperatures between Celsius and Fahrenheit, with validation to ensure inputs do not go below absolute zero.
 
@@ -108,7 +108,7 @@ curl -X GET "http://localhost:3000/convert?value=-300&scale=C"
   "error": "Temperature cannot be below absolute zero: -273.15°C or -459.67°F."
 }
 ```
-## **Swagger API Documentation**
+## **Swagger (OpenAPI) Auto-Generated Documentation**
 Swagger documentation is available at:
 
 ```bash
