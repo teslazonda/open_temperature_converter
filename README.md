@@ -1,4 +1,4 @@
-# Temperature Converter API
+# Open API Temperature Converter
 
 A simple API for converting temperatures between Celsius and Fahrenheit, with validation to ensure inputs do not go below absolute zero.
 
